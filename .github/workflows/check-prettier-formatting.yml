@@ -7,8 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
 
@@ -18,7 +17,6 @@ jobs:
       - name: Run Prettier
         run: npm run format
 
-      - name: Commit changes
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Apply prettier changes
