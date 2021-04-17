@@ -8,12 +8,13 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout base repo
       uses: actions/checkout@v2
 
     - name: Install NPM dependencies
-      uses: npm ci
+      run: npm ci
 
     - name: Run Prettier
       run: npm run format
