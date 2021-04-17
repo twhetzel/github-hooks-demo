@@ -6,7 +6,7 @@ on:
     - "**.json"
 
 jobs:
-  validate:
+  lint:
     name: Prettier
     runs-on: ubuntu-latest
 
@@ -17,3 +17,5 @@ jobs:
           node-version: "14"
       - run: npm install
       - run: npm run format
+
+
