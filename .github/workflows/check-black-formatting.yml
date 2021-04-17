@@ -18,7 +18,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
-
+	secret: ${{ secrets.SUPERSECRET }}
     - name: Install dependencies
       run: python3 -m pip install -r requirements.txt
 
