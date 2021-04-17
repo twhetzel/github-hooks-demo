@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Install NPM dependencies
         run: npm ci
@@ -17,8 +19,8 @@ jobs:
         run: npm run format
 
       - name: Commit changes
-        uses: twhetzel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Apply Prettier changes
+          commit_message: Apply prettier changes
 
 
