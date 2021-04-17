@@ -12,9 +12,12 @@ jobs:
     steps:
     - name: Checkout base repo
       uses: actions/checkout@v2
+      uses: actions/setup-node@v1
+      with:
+        node-version: "14"
 
     - name: Install NPM dependencies
-      run: npm ci
+      run: npm install
 
     - name: Run Prettier
       run: npm run format
