@@ -21,5 +21,10 @@
   "homepage": "https://github.com/twhetzel/github-hooks-demo#readme",
   "devDependencies": {
     "prettier": "^1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "git-format-staged -f 'prettier --ignore-unknown --stdin --stdin-filepath \"{}\"' ."
+    }
   }
 }
