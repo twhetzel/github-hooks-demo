@@ -1,6 +1,4 @@
 name: Check Python formatting using Black
-env:
-      super_secret: ${{ secrets.SUPERSECRET }}
 
 on:
   push:
@@ -13,6 +11,8 @@ jobs:
     steps:
     - name: Checkout base repo
       uses: actions/checkout@v2
+      with:
+        secret: ${{ secrets.SUPERSECRET }}
 
     - name: Set up Python
       uses: actions/setup-python@v2
