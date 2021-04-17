@@ -16,5 +16,9 @@ jobs:
       - name: Run Prettier
         run: npm run format
 
+      - name: Commit changes
+        uses: twhetzel/git-auto-commit-action@v4
+        with:
+          commit_message: Apply Prettier changes
 
 
