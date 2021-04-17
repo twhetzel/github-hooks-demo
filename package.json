@@ -1,0 +1,24 @@
+{
+    "name": "github-hooks-demo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "format": "prettier --write 'src/data/*.json'"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/twhetzel/github-hooks-demo.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "",
+    "bugs": {
+        "url": "https://github.com/twhetzel/github-hooks-demo/issues"
+    },
+    "homepage": "https://github.com/twhetzel/github-hooks-demo#readme",
+    "devDependencies": {
+        "prettier": "^1.19.1"
+    }
+}
