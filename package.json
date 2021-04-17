@@ -5,8 +5,8 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "format": "prettier --write 'src/data/*.json'",
-        "check": "prettier --check 'src/data/*.json'"
+        "format": "prettier --write 'src/*.{json,js,ts,tsx}'",
+        "check": "prettier --check 'src/*.{json,js,ts,tsx}'"
     },
     "repository": {
         "type": "git",
