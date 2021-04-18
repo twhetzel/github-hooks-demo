@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write '{src/**,src/data/**}.{json,js,ts,tsx}'",
-    "check": "prettier --check '{src/**,src/data/**}.{json,js,ts,tsx}'"
+    "check": "prettier --check '{src/**,src/data/**}.{json,js,ts,tsx}'",
+    "pretty-quick": "pretty-quick"
   },
   "repository": {
     "type": "git",
@@ -21,26 +22,12 @@
   "homepage": "https://github.com/twhetzel/github-hooks-demo#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "prettier --check '{src/**,src/data/**}.{json,js,ts,tsx}'"
+      "pre-commit": "pretty-quick --staged"
     }
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,json}": [
-      "prettier --write",
-      "eslint --fix",
-      "git add"
-    ],
-    "*.{html,css,less,ejs}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.22.0",
-    "@typescript-eslint/parser": "^4.22.0",
-    "eslint": "^7.24.0",
     "husky": "^6.0.0",
-    "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0"
   }
 }
