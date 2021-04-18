@@ -6,9 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write '{src/**,src/data/**}.{json,js,ts,tsx}'",
-    "check": "prettier --check '{src/**,src/data/**}.{json,js,ts,tsx}'",
-    "pretty-quick": "pretty-quick",
-    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+    "check": "prettier --check '{src/**,src/data/**}.{json,js,ts,tsx}'"
   },
   "repository": {
     "type": "git",
@@ -23,7 +21,7 @@
   "homepage": "https://github.com/twhetzel/github-hooks-demo#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": ["echo \"Running [Husky] pre-commit tests...\""]
     }
   },
   "devDependencies": {
