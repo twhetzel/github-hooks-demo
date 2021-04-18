@@ -19,14 +19,16 @@
     "url": "https://github.com/twhetzel/github-hooks-demo/issues"
   },
   "homepage": "https://github.com/twhetzel/github-hooks-demo#readme",
-  "devDependencies": {
-    "git-format-staged": "^2.1.1",
-    "husky": "^6.0.0",
-    "prettier": "^1.19.1"
-  },
   "husky": {
     "hooks": {
-      "pre-commit": "git-format-staged -f 'prettier --ignore-unknown --stdin --stdin-filepath \"{json,js,ts,tsx}\"' ."
+      "pre-commit": "pretty-quick --staged"
     }
+  },
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "pretty-quick": "^3.1.0"
+  },
+  "dependencies": {
+    "prettier": "^2.2.1"
   }
 }
