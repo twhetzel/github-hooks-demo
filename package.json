@@ -21,14 +21,24 @@
   "homepage": "https://github.com/twhetzel/github-hooks-demo#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "lint-staged"
     }
   },
-  "devDependencies": {
-    "husky": "^6.0.0",
-    "pretty-quick": "^3.1.0"
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{html,css,less,ejs}": [
+      "prettier --write",
+      "git add"
+    ]
   },
-  "dependencies": {
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
     "prettier": "^2.2.1"
   }
 }
