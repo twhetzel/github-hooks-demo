@@ -21,7 +21,11 @@
     "url": "https://github.com/twhetzel/github-hooks-demo/issues"
   },
   "homepage": "https://github.com/twhetzel/github-hooks-demo#readme",
-  "pre-commit": ["precommit-msg", "check"],
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "devDependencies": {
     "husky": "^6.0.0",
     "pre-commit": "^1.2.2",
