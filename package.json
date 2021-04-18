@@ -21,13 +21,14 @@
   "homepage": "https://github.com/twhetzel/github-hooks-demo#readme",
   "husky": {
     "hooks": {
-      "pre-commit": ["echo \"Running [Husky] pre-commit tests...\""]
+      "pre-commit": [
+        "echo \"Running [Husky] pre-commit tests...\""
+      ]
     }
   },
   "devDependencies": {
+    "git-format-staged": "^2.1.1",
     "husky": "^6.0.0",
-    "pre-commit": "^1.2.2",
-    "prettier": "^2.2.1",
-    "pretty-quick": "^3.1.0"
+    "prettier": "^2.2.1"
   }
 }
