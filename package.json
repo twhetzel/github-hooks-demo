@@ -22,7 +22,7 @@
   "homepage": "https://github.com/twhetzel/github-hooks-demo#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "pretty-quick"
     }
   },
   "devDependencies": {
